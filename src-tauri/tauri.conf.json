@@ -8,11 +8,20 @@
   },
   "package": {
     "productName": "t-drawio",
-    "version": "0.0.0"
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "http": {
+        "scope": [
+          "http://**",
+          "https://**"
+        ]
+       },
+       "notification": {
+         "all": true
+       }
     },
     "bundle": {
       "active": true,
@@ -29,7 +38,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.litttley.tdrawio",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -44,7 +53,10 @@
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "wix": {
+          "language": "zh-CN"
+        }
       }
     },
     "security": {
